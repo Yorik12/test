@@ -1,0 +1,102 @@
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d5ad7f; 
+            perspective: 1000px;
+        }
+        
+        .rubiks-cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotate 8s infinite linear;
+        }
+        
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 2px solid #333;
+        }
+        
+        .cubelet {
+            border-radius: 3px;
+        }
+        
+        
+        .front {
+            transform: translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        
+       
+        .red {
+            background-color: #ff0000;
+        }
+        
+        .blue {
+            background-color: #0000ff;
+        }
+        
+        .green {
+            background-color: #00ff00;
+        }
+        
+        .white {
+            background-color: #ffffff;
+        }
+        
+        .yellow {
+            background-color: #ffff00;
+        }
+        
+        .orange {
+            background-color: #ffa500;
+        }
+        
+     
+        @keyframes rotate{
+    0%{
+        transform: rotateX(-20deg)
+            rotateY(360deg);}
+    100%{transform: rotateX(-20deg)
+        rotateY(0)}
+    
+}
+
